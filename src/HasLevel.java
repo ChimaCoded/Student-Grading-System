@@ -1,3 +1,3 @@
 public interface HasLevel {
-    String getLevel();
+        String getLevel();
 }
