@@ -1,22 +1,38 @@
 import java.util.*;
 
 // create a Register class with a list of Nameable
-public class Register {
-    private List<Nameable> students_list;
+public class Register implements HasLevel{
+    private List<String> studentsNameList;
+    Student student = new Student();
+    private List<String> namesOfStudents = new ArrayList<>();
+    private Level level;
 
-    public Register(List<Nameable> list) {
-        this.students_list = list;
+    public Register(List<String> studentsNameList) {
+        this.studentsNameList = studentsNameList;
     }
 
     //function returns names of students
     public List<String> getRegister() {
-        List<String> NamesOfStudents = new ArrayList<>();
-        for (Nameable student : students_list) {
-            NamesOfStudents.add(student.getName());
+        for (String name : this.studentsNameList) {
+            namesOfStudents.add(student.getName(name));
         }
-        return NamesOfStudents;
+        return namesOfStudents;
     }
 
+    //get register by level
+    public void getRegisterByLevel(Level level){
+        this.level = level;
+    }
+
+    public String printReport(){
+        return ("");
+    }
+
+    @Override
+
+    public Level getLevel() {
+        return null;
+    }
 }
 
 

@@ -1,20 +1,21 @@
+import java.util.Collections;
 import java.util.List;
+
 public class Lecture {
 
-    private List<Double> studentsGrade;
-    private double HighestAverageGrade;
+    private List<Double> studentsAverageGrade;
+    private double highestAverageGrade;
 
-    public void  Enter(List<Student> student){
-        //this.studentsGrade = student.getAverageGrade();
+    //getting a list of average grades of various students
+    public void  Enter(List<Double> studentsAverageGrade){
+        this.studentsAverageGrade = studentsAverageGrade;
     }
 
-        public double getHighestAverageGrade(){
-            return HighestAverageGrade;
-        }
-
+    //getting the highest average grade of the various students
+    public double getHighestAverageGrade(){
+         highestAverageGrade = Collections.max(studentsAverageGrade);
+        return highestAverageGrade;
     }
-
-//test
-//import static org.junit.jupiter.api.Assertions.*;
+}
 
 

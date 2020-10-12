@@ -1,3 +1,4 @@
 public interface HasLevel {
-        String getLevel();
+        enum Level {Level300};
+        Level getLevel();
 }
